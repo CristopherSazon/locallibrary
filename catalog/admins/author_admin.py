@@ -2,4 +2,5 @@ from django.contrib import admin
 
 
 class AuthorAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
+    fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
